@@ -45,7 +45,34 @@ info_p.textContent = "Для добавления уровня в список �
 info_p.className = "montserrat-sd";
 document.body.appendChild(info_p);
 
-let bs_divs = false;
+const div_boxes = document.createElement("div");
+div_boxes.className = "boxes";
+document.body.appendChild(div_boxes);
+            
+const div_boxes_box_moderators = document.createElement("div");
+div_boxes_box_moderators.className = "box";
+div_boxes_box_moderators.id = "moderators";
+div_boxes.appendChild(div_boxes_box_moderators);
+            
+const div_boxes_box_moderators_h2 = document.createElement("h2");
+div_boxes_box_moderators_h2.textContent = "Список модераторов";
+div_boxes_box_moderators.appendChild(div_boxes_box_moderators_h2);
+            
+moderators.forEach(moderator => {
+    const pp = document.createElement("p");
+    pp.textContent = moderator;
+    document.getElementById("moderators").appendChild(pp);
+            
+    console.log("moderator created");
+});
+            
+const div_boxes_box_raterequired = document.createElement("div");
+div_boxes_box_raterequired.className = "box";
+div_boxes.appendChild(div_boxes_box_raterequired);
+            
+const div_boxes_box_raterequired_h2 = document.createElement("h2");
+div_boxes_box_raterequired_h2.textContent = "Нужен рейт?";
+div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
 
 lists.forEach(list => {
     let levels = list[0];
@@ -64,38 +91,6 @@ lists.forEach(list => {
     };
     
     if (listname == document.title) {
-        if (bs_divs == false) {
-            const div_boxes = document.createElement("div");
-            div_boxes.className = "boxes";
-            document.body.appendChild(div_boxes);
-            
-            const div_boxes_box_moderators = document.createElement("div");
-            div_boxes_box_moderators.className = "box";
-            div_boxes_box_moderators.id = "moderators";
-            div_boxes.appendChild(div_boxes_box_moderators);
-            
-            const div_boxes_box_moderators_h2 = document.createElement("h2");
-            div_boxes_box_moderators_h2.textContent = "Список модераторов";
-            div_boxes_box_moderators.appendChild(div_boxes_box_moderators_h2);
-            
-            moderators.forEach(moderator => {
-                const pp = document.createElement("p");
-                pp.textContent = moderator;
-                document.getElementById("moderators").appendChild(pp);
-            
-                console.log("moderator created");
-            });
-            
-            const div_boxes_box_raterequired = document.createElement("div");
-            div_boxes_box_raterequired.className = "box";
-            div_boxes.appendChild(div_boxes_box_raterequired);
-            
-            const div_boxes_box_raterequired_h2 = document.createElement("h2");
-            div_boxes_box_raterequired_h2.textContent = "Нужен рейт?";
-            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
-        }
-        bs_divs = true;
-
         if (listraterequired == true) {
             const div_boxes_box_raterequired_value = document.createElement("p");
             div_boxes_box_raterequired_value.textContent = "Да";
