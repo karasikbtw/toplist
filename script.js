@@ -41,6 +41,9 @@ let lists = [
     ]
 ];
 
+const info = document.createElement("p");
+info.textContent = "Для добавления уровня в список обращаться: @dorsikm (ТГ)";
+
 const div_boxes = document.createElement("div");
 div_boxes.className = "boxes";
 document.body.appendChild(div_boxes);
