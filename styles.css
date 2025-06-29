@@ -10,6 +10,18 @@ body {
 .boxes {
     display: flex;
 }
+.button {
+    background-color: azure;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color: black;
+    outline-style: dashed;
+    outline-width: 1.5px;
+    outline-color:rgb(204, 204, 204);
+    text-decoration: none;
+}
 .box {
     background-color: azure;
     font-family: "Montserrat", sans-serif;
