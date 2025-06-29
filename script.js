@@ -1,9 +1,4 @@
-2// script.js
-
-let moderators = [
-    "karasikbtw",
-    "DUHA5656"
-];
+// script.js
 
 let lists = [
     [ // first list
@@ -91,6 +86,12 @@ lists.forEach(list => {
     };
     
     if (listname == document.title) {
+        const button2 = document.createElement("a");
+        button2.textContent = "Правила";
+        button2.href = "rules.html";
+        button2.className = "button";
+        document.getElementById("buttons").appendChild(button2);
+
         if (listraterequired == true) {
             const div_boxes_box_raterequired_value = document.createElement("p");
             div_boxes_box_raterequired_value.textContent = "Да";
