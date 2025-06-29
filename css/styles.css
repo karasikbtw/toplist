@@ -1,0 +1,176 @@
+/* Main styling for all pages */
+:root {
+  --primary-color: #6b46c1;
+  --secondary-color: #805ad5;
+  --dark-color: #2d3748;
+  --light-color: #f7fafc;
+  --highlight-color: #9f7aea;
+  --danger-color: #e53e3e;
+  --success-color: #48bb78;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: #1a202c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+  border-left: 4px solid var(--highlight-color);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: var(--highlight-color);
+}
+
+.card p {
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.server-info {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.server-ip {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.level-list {
+  margin: 1rem 0;
+}
+
+.level-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #2d3748;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.level-item.top {
+  border-left: 4px solid var(--success-color);
+}
+
+.level-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badge.top {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.level-details {
+  margin: 1rem 0;
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.button-secondary {
+  background-color: var(--dark-color);
+  color: white;
+  border: 1px solid var(--light-color);
+}
+
+.button-secondary:hover {
+  background-color: #4a5568;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
