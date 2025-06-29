@@ -43,7 +43,7 @@ levels1.forEach(element => {
     const div_content = document.createElement("div");
     div_content.id = "level";
     div_content.className = "level";
-    document.getElementById("levels").appendChild(div_content);
+    document.getElementById("levels1").appendChild(div_content);
 
     globEnum1 += 1;
     let name = element.name;
