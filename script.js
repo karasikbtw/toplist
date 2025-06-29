@@ -68,13 +68,13 @@ moderators.forEach(moderator => {
     console.log("moderator created");
 });
 
-const div_boxes_box_moderators_raterequired_box = document.createElement("div");
-div_boxes_box_moderators_raterequired_box.className = "box";
-div_boxes.appendChild(div_boxes_box_moderators_raterequired_box);
+const div_boxes_box_raterequired = document.createElement("div");
+div_boxes_box_raterequired.className = "box";
+div_boxes.appendChild(div_boxes_box_raterequired);
 
-const div_boxes_box_moderators_raterequired = document.createElement("h2");
-div_boxes_box_moderators_raterequired.textContent = "Оценка необходима?";
-div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired);
+const div_boxes_box_raterequired_h2 = document.createElement("h2");
+div_boxes_box_raterequired_h2.textContent = "Оценка необходима?";
+div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
 
 lists.forEach(list => {
     let levels = list[0];
@@ -94,14 +94,14 @@ lists.forEach(list => {
     
     if (listname == document.title) {
         if (listraterequired == true) {
-            const div_boxes_box_moderators_raterequired_value = document.createElement("p");
-            div_boxes_box_moderators_raterequired_value.textContent = "Да";
-            div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+            const div_boxes_box_raterequired_value = document.createElement("p");
+            div_boxes_box_raterequired_value.textContent = "Да";
+            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
         };
         else {
-            const div_boxes_box_moderators_raterequired_value = document.createElement("p");
-            div_boxes_box_moderators_raterequired_value.textContent = "Нет";
-            div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+            const div_boxes_box_raterequired_value = document.createElement("p");
+            div_boxes_box_raterequired_value.textContent = "Нет";
+            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
         };
     
         levels.forEach(element => {
