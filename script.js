@@ -61,7 +61,7 @@ lists.forEach(list => {
             div_content.className = "level";
             document.getElementById("levels").appendChild(div_content);
             if (element.verifed == true) {
-                div_content.style = "background-color: rgb(127, 255, 212)";
+                div_content.style = "background-color: rgb(185, 255, 255)";
             };
         
             globEnum += 1;
