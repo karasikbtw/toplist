@@ -89,14 +89,14 @@ lists.forEach(list => {
         button.className = "button";
         document.getElementById("buttons").appendChild(button);
     };
-    
-    if (listname == document.title) {
-        const button2 = document.createElement("a");
+
+    const button2 = document.createElement("a");
         button2.textContent = "Правила";
         button2.href = "rules.html";
         button2.className = "button";
         document.getElementById("buttons").appendChild(button2);
-
+    
+    if (listname == document.title) {
         if (listraterequired == true) {
             const div_boxes_box_raterequired_value = document.createElement("p");
             div_boxes_box_raterequired_value.textContent = "Да";
