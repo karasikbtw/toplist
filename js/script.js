@@ -1,33 +1,13 @@
-function createSite() {
-  fetch('lists.json')
-    .then(response => response.json())
-    .then(lists => {
-      lists.forEach(list => {
-        // Create site for each list
-        const listContainer = document.createElement('div');
-        listContainer.innerHTML = `<h2>${list.name}</h2>`;
-        document.body.appendChild(listContainer);
-        list.levels.forEach(levelId => {
-          fetch('levels.json')
-            .then(response => response.json())
-            .then(levels => {
-              const level = levels.find(l => l.id === levelId);
-              if (level) {
-                const levelElement = document.createElement('p');
-                levelElement.innerText = `${level.name} by ${level.creator}`;
-                listContainer.appendChild(levelElement);
-              }
-            });
-        });
-      });
-    });
-}
-createSite();
-
 // Utility functions
 async function fetchJSON(url) {
-  const response = await fetch(url);
-  return await response.json();
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return await response.json();
+  } catch (error) {
+    console.error(`Failed to fetch ${url}:`, error);
+    return null;
+  }
 }
 
 function renderTemplate(template, data) {
@@ -37,7 +17,7 @@ function renderTemplate(template, data) {
 // Initialize the application based on current page
 document.addEventListener('DOMContentLoaded', async () => {
   const path = window.location.pathname;
-  
+
   // Load servers on homepage
   if (path === '/' || path === '/index.html') {
     await loadServers();
@@ -56,6 +36,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   else if (path.startsWith('/level/')) {
     const levelId = path.split('/')[2];
     await loadLevelDetails(levelId);
+  } else {
+    console.warn('Unknown page:', path);
   }
 });
 
@@ -65,7 +47,8 @@ async function loadServers() {
   if (!serversContainer) return;
 
   const servers = await fetchJSON('servers.json');
-  
+  if (!servers) return;
+
   servers.forEach(server => {
     const serverCard = document.createElement('div');
     serverCard.className = 'card';
@@ -178,21 +161,4 @@ async function loadLevelDetails(levelId) {
     document.getElementById('server-info').textContent = `Connected to: ${server.name}`;
     document.getElementById('server-ip').textContent = `IP: ${server.ip}:${server.port}`;
   }
-}
-
-// Generate dynamic pages in development environment
-if (window.location.href.includes('localhost')) {
-  generatePages();
-}
-
-async function generatePages() {
-  // This function would be used to pre-generate HTML pages for deployment
-  const [servers, lists, levels] = await Promise.all([
-    fetchJSON('servers.json'),
-    fetchJSON('lists.json'),
-    fetchJSON('levels.json')
-  ]);
-
-  // In a real deployment, you would use server-side rendering or static site generation
-  console.log('Pages would be generated here for production');
 }
