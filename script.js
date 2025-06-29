@@ -1,5 +1,10 @@
 // script.js
 
+let moderators = [
+    "karasikbtw",
+    "DUHA5656"
+];
+
 let lists = [
     [ // first list
         [ // levels
