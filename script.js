@@ -1,7 +1,8 @@
 // script.js
 
 let moderators = [
-    "karasikbtw"
+    "karasikbtw",
+    "DUHA5656"
 ];
 
 let lists = [
