@@ -102,7 +102,7 @@ lists.forEach(list => {
             const div_boxes_box_raterequired_value = document.createElement("p");
             div_boxes_box_raterequired_value.textContent = "Нет";
             div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
-        };
+        }
     
         levels.forEach(element => {
             const div_content = document.createElement("div");
