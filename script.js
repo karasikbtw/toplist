@@ -1,4 +1,9 @@
 // script.js
+
+let moderators = [
+    "karasikbtw"
+];
+
 let lists = [
     [ // first list
         [ // levels
@@ -41,6 +46,12 @@ let lists = [
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html" }
     ]
 ];
+
+moderators.forEach(moderator => {
+    const pp = document.createElement("p");
+    pp.textContent = moderator;
+    document.getElementById("moderators").appendChild(pp);
+});
 
 lists.forEach(list => {
     let levels = list[0];
