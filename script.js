@@ -51,6 +51,8 @@ moderators.forEach(moderator => {
     const pp = document.createElement("p");
     pp.textContent = moderator;
     document.getElementById("moderators").appendChild(pp);
+
+    console.log("moderator created");
 });
 
 lists.forEach(list => {
@@ -88,7 +90,7 @@ lists.forEach(list => {
             const p_blw = document.createElement("h3");
             p_blw.textContent = "создатель: "+creator; // published by karasikbtw
             if (element.verifed == true) {
-                p_blw.textContent += " | Подтверждено"
+                p_blw.textContent += " | Подтверждено";
             };
             p_blw.style = "color: rgb(87, 87, 87, 0.75)";
             div_content.appendChild(p_blw);
