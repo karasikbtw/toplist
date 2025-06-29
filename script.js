@@ -59,10 +59,10 @@ lists.forEach(list => {
             const div_content = document.createElement("div");
             div_content.id = "level";
             div_content.className = "level";
-            if (element.verifed) {
+            document.getElementById("levels").appendChild(div_content);
+            if (element.verifed == true) {
                 div_content.style = "background-color: rgb(127, 255, 212)";
             };
-            document.getElementById("levels").appendChild(div_content);
         
             globEnum += 1;
             let name = element.name;
