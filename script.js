@@ -95,17 +95,6 @@ lists.forEach(list => {
             div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
         }
         bs_divs = true;
-
-        if (listraterequired == true) {
-            const div_boxes_box_raterequired_value = document.createElement("p");
-            div_boxes_box_raterequired_value.textContent = "Да";
-            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
-        }
-        else {
-            const div_boxes_box_raterequired_value = document.createElement("p");
-            div_boxes_box_raterequired_value.textContent = "Нет";
-            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
-        }
     
         levels.forEach(element => {
             const div_content = document.createElement("div");
