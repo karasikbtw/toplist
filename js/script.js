@@ -1,9 +1,15 @@
 // Utility functions
 async function fetchJSON(url) {
   try {
+    console.log(`Fetching JSON from: ${url}`);
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-    return await response.json();
+    if (!response.ok) {
+      console.error(`HTTP error! Status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(`Successfully fetched data from ${url}`, data);
+    return data;
   } catch (error) {
     console.error(`Failed to fetch ${url}:`, error);
     return null;
@@ -11,30 +17,28 @@ async function fetchJSON(url) {
 }
 
 function renderTemplate(template, data) {
+  console.log(`Rendering template with data:`, data);
   return template.replace(/\{\{(\w+)\}\}/g, (match, key) => data[key] || '');
 }
 
 // Initialize the application based on current page
 document.addEventListener('DOMContentLoaded', async () => {
   const path = window.location.pathname;
+  console.log(`Current path: ${path}`);
 
-  // Load servers on homepage
   if (path === '/' || path === '/index.html') {
     await loadServers();
-  }
-  // Load server details page
-  else if (path.startsWith('/server/')) {
+  } else if (path.startsWith('/server/')) {
     const serverId = path.split('/')[2];
+    console.log(`Loading details for server ID: ${serverId}`);
     await loadServerDetails(serverId);
-  }
-  // Load list details page
-  else if (path.startsWith('/list/')) {
+  } else if (path.startsWith('/list/')) {
     const listId = path.split('/')[2];
+    console.log(`Loading details for list ID: ${listId}`);
     await loadListDetails(listId);
-  }
-  // Load level details page
-  else if (path.startsWith('/level/')) {
+  } else if (path.startsWith('/level/')) {
     const levelId = path.split('/')[2];
+    console.log(`Loading details for level ID: ${levelId}`);
     await loadLevelDetails(levelId);
   } else {
     console.warn('Unknown page:', path);
@@ -44,11 +48,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Load all servers on homepage
 async function loadServers() {
   const serversContainer = document.getElementById('servers-container');
-  if (!serversContainer) return;
+  if (!serversContainer) {
+    console.warn('Servers container not found!');
+    return;
+  }
 
   const servers = await fetchJSON('servers.json');
-  if (!servers) return;
+  if (!servers) {
+    console.warn('No servers data received.');
+    return;
+  }
 
+  console.log(`Loaded ${servers.length} servers`);
   servers.forEach(server => {
     const serverCard = document.createElement('div');
     serverCard.className = 'card';
@@ -72,16 +83,17 @@ async function loadServerDetails(serverId) {
 
   if (!server) {
     alert('Server not found');
+    console.warn(`Server with ID ${serverId} not found`);
     window.location.href = '/';
     return;
   }
 
-  // Update server info
+  console.log(`Loaded details for server:`, server);
   document.getElementById('server-name').textContent = server.name;
   document.getElementById('server-ip').textContent = `IP: ${server.ip}:${server.port}`;
 
-  // Load lists for this server
   const listsContainer = document.getElementById('lists-container');
+  console.log(`Loading lists for server ID: ${serverId}`);
   lists.forEach(list => {
     const listCard = document.createElement('div');
     listCard.className = 'card';
@@ -104,16 +116,17 @@ async function loadListDetails(listId) {
 
   if (!list) {
     alert('List not found');
+    console.warn(`List with ID ${listId} not found`);
     window.location.href = '/';
     return;
   }
 
-  // Update list info
+  console.log(`Loaded details for list:`, list);
   document.getElementById('list-name').textContent = list.name;
   document.getElementById('server-name').textContent = `Server: ${server.name}`;
 
-  // Load levels in this list
   const levelsContainer = document.getElementById('levels-container');
+  console.log(`Loading levels for list ID: ${listId}`);
   list.levels.forEach(levelId => {
     const level = levels.find(l => l.id === levelId);
     if (level) {
@@ -142,15 +155,15 @@ async function loadLevelDetails(levelId) {
 
   if (!level) {
     alert('Level not found');
+    console.warn(`Level with ID ${levelId} not found`);
     window.location.href = '/';
     return;
   }
 
-  // Find which list this level belongs to
+  console.log(`Loaded details for level:`, level);
   const levelList = lists.find(l => l.levels.includes(levelId));
   const server = levelList ? servers.find(s => s.id === levelList.server_id) : null;
 
-  // Update level info
   document.getElementById('level-name').textContent = level.name;
   document.getElementById('creator').textContent = level.creator;
   document.getElementById('level-id').textContent = level.level_id;
