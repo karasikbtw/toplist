@@ -18,6 +18,16 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?" }
         ],
         { name: "Список сложных платформеров - TopList", enum: 0 }
+    ],
+    [
+        [ // levels
+            { "name": "Diamond Trip", "creator": "alduk9", "id": "163" },
+            { "name": "TT world", "creator": "bikchi", "id": "136" },
+            { "name": "grimuar", "creator": "redyzzz", "id": "223" },
+            { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117" },
+            { "name": "?", "creator": "noone", "id": "?" }
+        ],
+        { name: "Список сложных уровней - TopList", enum: 0 }
     ]
 ];
 
