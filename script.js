@@ -1,4 +1,4 @@
-// script.js
+2// script.js
 
 let moderators = [
     "karasikbtw",
@@ -8,7 +8,6 @@ let moderators = [
 let lists = [
     [ // first list
         [ // levels
-            { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": false, },
             { "name": "OfLight", "creator": "yaskripts", "id": "242", "verifed": false },
             { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
         ],
