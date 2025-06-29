@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .montserrat-sd {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+        body {
+            background-color: rgb(234, 234, 234)
+        }
+        .level {
+            background-color: azure;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+            margin: 5px 5px 5px 5px;
+            outline-style: dashed;
+            outline-width: 1.5px;
+            outline-color:rgb(204, 204, 204);
+            align-content: center;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="montserrat-sd" style="position: sticky; background-color: rgb(230, 230, 230);">Список невозможных уровней</h1>
+    <div id="levels"></div>
+
+    <script>
+        let levels = [
+            { "name": "?", "creator": "noone", "id": "1" },
+            { "name": "?", "creator": "noone", "id": "2" },
+            { "name": "?", "creator": "noone", "id": "3" },
+            { "name": "?", "creator": "noone", "id": "4" },
+            { "name": "?", "creator": "noone", "id": "5" }
+        ];
+        let globEnum = 0;
+
+        levels.forEach(element => {
+            const div_content = document.createElement("div");
+            div_content.id = "level";
+            div_content.className = "level";
+            document.getElementById("levels").appendChild(div_content);
+
+            globEnum += 1;
+            let name = element.name;
+            let creator = element.creator;
+            let id = element.id;
+
+            const pp = document.createElement("h1");
+            pp.textContent = "#"+globEnum+" - "+name+" ("+id+")"; // #1 - Test (616)
+            div_content.appendChild(pp);
+
+            const p_blw = document.createElement("h3");
+            p_blw.textContent = "выложено "+creator; // published by karasikbtw
+            p_blw.style = "color: rgb(87, 87, 87, 0.75)";
+            div_content.appendChild(p_blw);
+
+            console.log("test element created");
+        });
+    </script>
+</body>
+</html>
