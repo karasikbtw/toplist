@@ -7,7 +7,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?" },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
-        { name: "Список невозможных уровней - TopList", enum: 0 }
+        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html" }
     ],
     [
         [ // levels
@@ -17,7 +17,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?" },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
-        { name: "Список сложных платформеров - TopList", enum: 0 }
+        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html" }
     ],
     [
         [ // levels
@@ -27,7 +27,17 @@ let lists = [
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117" },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
-        { name: "Список сложных уровней - TopList", enum: 0 }
+        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html" }
+    ],
+    [
+        [ // levels
+            { "name": "Hayate", "creator": "Taujaan", "id": "123" },
+            { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120" },
+            { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213" },
+            { "name": "new word", "creator": "eray14", "id": "103" },
+            { "name": "?", "creator": "noone", "id": "?" }
+        ],
+        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html" }
     ]
 ];
 
@@ -35,7 +45,15 @@ lists.forEach(list => {
     let levels = list[0];
     let globEnum = list[1].enum;
     let listname = list[1].name;
+    let listhref = list[1].href;
 
+    if (listname != document.title) {
+        const button = document.createElement("a");
+        button.textContent = listname;
+        button.href = listhref;
+        document.getElementById("buttons").appendChild(button);
+    };
+    
     if (listname == document.title) {
         levels.forEach(element => {
             const div_content = document.createElement("div");
