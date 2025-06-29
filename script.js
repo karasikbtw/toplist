@@ -2,39 +2,39 @@ let lists = [
     [ // first list
         [ // levels
             { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": true },
-            { "name": "OfLight", "creator": "yaskripts", "id": "239" },
-            { "name": "UnderWorse", "creator": "DECAdence", "id": "145" },
-            { "name": "?", "creator": "noone", "id": "?" },
-            { "name": "?", "creator": "noone", "id": "?" }
+            { "name": "OfLight", "creator": "yaskripts", "id": "239", "verifed": false },
+            { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
         { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html" }
     ],
     [
         [ // levels
-            { "name": "19", "creator": "Taujaan", "id": "151" },
-            { "name": "?", "creator": "noone", "id": "?" },
-            { "name": "?", "creator": "noone", "id": "?" },
-            { "name": "?", "creator": "noone", "id": "?" },
-            { "name": "?", "creator": "noone", "id": "?" }
+            { "name": "19", "creator": "Taujaan", "id": "151", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
+            { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
         { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html" }
     ],
     [
         [ // levels
-            { "name": "Diamond Trip", "creator": "alduk9", "id": "163" },
-            { "name": "TT world", "creator": "bikchi", "id": "136" },
-            { "name": "grimuar", "creator": "redyzzz", "id": "223" },
-            { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117" },
-            { "name": "Nautilos", "creator": "kituh0777", "id": "171" }
+            { "name": "Diamond Trip", "creator": "alduk9", "id": "163", "verifed": false },
+            { "name": "TT world", "creator": "bikchi", "id": "136", "verifed": false },
+            { "name": "grimuar", "creator": "redyzzz", "id": "223", "verifed": false },
+            { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
+            { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
         { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html" }
     ],
     [
         [ // levels
-            { "name": "Hayate", "creator": "Taujaan", "id": "123" },
-            { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120" },
-            { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213" },
-            { "name": "new word", "creator": "eray14", "id": "103" },
+            { "name": "Hayate", "creator": "Taujaan", "id": "123", "verifed": false },
+            { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120", "verifed": false },
+            { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213", "verifed": false },
+            { "name": "new word", "creator": "eray14", "id": "103", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html" }
