@@ -25,7 +25,7 @@ let lists = [
             { "name": "TT world", "creator": "bikchi", "id": "136" },
             { "name": "grimuar", "creator": "redyzzz", "id": "223" },
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117" },
-            { "name": "?", "creator": "noone", "id": "?" }
+            { "name": "Nautilos", "creator": "kituh0777", "id": "171" }
         ],
         { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html" }
     ],
