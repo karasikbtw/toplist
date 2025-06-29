@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Level One",
+    "creator": "CreatorA",
+    "level_id": "1",
+    "top_in_list": true
+  },
+  {
+    "id": "2",
+    "name": "Level Two",
+    "creator": "CreatorB",
+    "level_id": "2",
+    "top_in_list": false
+  },
+  {
+    "id": "3",
+    "name": "Level Three",
+    "creator": "CreatorC",
+    "level_id": "3",
+    "top_in_list": true
+  },
+  {
+    "id": "4",
+    "name": "Level Four",
+    "creator": "CreatorD",
+    "level_id": "4",
+    "top_in_list": false
+  },
+  {
+    "id": "5",
+    "name": "Level Five",
+    "creator": "CreatorE",
+    "level_id": "5",
+    "top_in_list": true
+  },
+  {
+    "id": "6",
+    "name": "Level Six",
+    "creator": "CreatorF",
+    "level_id": "6",
+    "top_in_list": false
+  },
+  {
+    "id": "7",
+    "name": "Level Seven",
+    "creator": "CreatorG",
+    "level_id": "7",
+    "top_in_list": true
+  },
+  {
+    "id": "8",
+    "name": "Level Eight",
+    "creator": "CreatorH",
+    "level_id": "8",
+    "top_in_list": false
+  }
+]
