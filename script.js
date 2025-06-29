@@ -11,18 +11,12 @@ let lists = [
             { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": false, },
             { "name": "OfLight", "creator": "yaskripts", "id": "242", "verifed": false },
             { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
         { name: "Impossible лист - TopList", enum: 0, "href": "index.html", "displayname": " Impossible лист ", "raterequired": false }
     ],
     [
         [ // levels
             { "name": "19", "creator": "Taujaan", "id": "151", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true }
     ],
@@ -42,7 +36,6 @@ let lists = [
             { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120", "verifed": false },
             { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213", "verifed": false },
             { "name": "new word", "creator": "eray14", "id": "103", "verifed": false },
-            { "name": "?", "creator": "noone", "id": "?" }
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false }
     ]
