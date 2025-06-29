@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{LEVEL_NAME}} - GD Level Shares</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">GD Level Shares</a>
+      <div>
+        <a href="/list/{{LIST_ID}}" class="button button-secondary">Back to List</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="level-header">
+      <h1 id="level-name">{{LEVEL_NAME}}</h1>
+      <span id="top-badge" class="badge {{TOP_CLASS}}">{{TOP_TEXT}}</span>
+    </div>
+
+    <div class="level-details">
+      <div class="card">
+        <h2>Creator</h2>
+        <p id="creator">{{CREATOR_NAME}}</p>
+      </div>
+
+      <div class="card">
+        <h2>Level ID</h2>
+        <p id="level-id">{{LEVEL_ID}}</p>
+      </div>
+
+      <div class="card">
+        <h2>Server Connection</h2>
+        <p id="server-info">Connected to: {{SERVER_NAME}}</p>
+        <div class="server-info" style="margin-top: 1rem;">
+          <span class="server-ip" id="server-ip">IP: {{SERVER_IP}}:{{SERVER_PORT}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
