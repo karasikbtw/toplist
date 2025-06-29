@@ -42,6 +42,7 @@ let lists = [
 
 const info_p = document.createElement("p");
 info_p.textContent = "Для добавления уровня в список обращаться: @dorsikm (ТГ)";
+info_p.className = "montserrat-sd";
 document.body.appendChild(info_p);
 
 const div_boxes = document.createElement("div");
