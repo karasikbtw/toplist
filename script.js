@@ -7,13 +7,13 @@ let moderators = [
 let lists = [
     [ // first list
         [ // levels
-            { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": false },
+            { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": false, },
             { "name": "OfLight", "creator": "yaskripts", "id": "242", "verifed": false },
             { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html" }
+        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html", "displayname": " Список невозможных уровней " }
     ],
     [
         [ // levels
@@ -23,7 +23,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html" }
+        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Список сложных платформеров " }
     ],
     [
         [ // levels
@@ -33,7 +33,7 @@ let lists = [
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
             { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
-        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html" }
+        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Список сложных уровней " }
     ],
     [
         [ // levels
@@ -43,7 +43,7 @@ let lists = [
             { "name": "new word", "creator": "eray14", "id": "103", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
-        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html" }
+        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей " }
     ]
 ];
 
@@ -60,10 +60,11 @@ lists.forEach(list => {
     let globEnum = list[1].enum;
     let listname = list[1].name;
     let listhref = list[1].href;
+    let listdisplayname = list[1].displayname;
 
     if (listname != document.title) {
         const button = document.createElement("a");
-        button.textContent = listname;
+        button.textContent = listdisplayname;
         button.href = listhref;
         document.getElementById("buttons").appendChild(button);
     };
