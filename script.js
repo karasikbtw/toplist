@@ -62,12 +62,6 @@ lists.forEach(list => {
         button.className = "button";
         document.getElementById("buttons").appendChild(button);
     };
-
-    const button2 = document.createElement("a");
-    button2.textContent = "Правила";
-    button2.href = "rules.html";
-    button2.className = "button";
-    document.getElementById("buttons").appendChild(button2);
     
     if (listname == document.title) {
         if (bs_divs == false) {
