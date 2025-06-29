@@ -8,6 +8,16 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?" }
         ],
         { name: "Список невозможных уровней - TopList", enum: 0 }
+    ],
+    [
+        [ // levels
+            { "name": "?", "creator": "noone", "id": "?" },
+            { "name": "?", "creator": "noone", "id": "?" },
+            { "name": "?", "creator": "noone", "id": "?" },
+            { "name": "?", "creator": "noone", "id": "?" },
+            { "name": "?", "creator": "noone", "id": "?" }
+        ],
+        { name: "Список сложных платформеров - TopList", enum: 0 }
     ]
 ];
 
