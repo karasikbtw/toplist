@@ -7,6 +7,9 @@
 body {
     background-color: rgb(234, 234, 234)
 }
+.boxes {
+    display: flex;
+}
 .box {
     background-color: azure;
     font-family: "Montserrat", sans-serif;
