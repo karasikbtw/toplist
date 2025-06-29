@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SERVER_NAME}} - GD Level Shares</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">GD Level Shares</a>
+      <div>
+        <a href="/" class="button button-secondary">Back to Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h1 id="server-name">{{SERVER_NAME}}</h1>
+      <div class="server-info">
+        <span class="server-ip" id="server-ip">IP: {{SERVER_IP}}:{{SERVER_PORT}}</span>
+      </div>
+    </div>
+
+    <h2>Available Lists</h2>
+    <div id="lists-container">
+      <!-- Lists will be loaded here by script.js -->
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
