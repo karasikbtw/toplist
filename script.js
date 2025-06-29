@@ -99,6 +99,7 @@ lists.forEach(list => {
         const button = document.createElement("a");
         button.textContent = listdisplayname;
         button.href = listhref;
+        button.className = "button";
         document.getElementById("buttons").appendChild(button);
     };
     
