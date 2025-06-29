@@ -13,7 +13,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html", "displayname": " Список невозможных уровней " }
+        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html", "displayname": " Список невозможных уровней ", "raterequired": false }
     ],
     [
         [ // levels
@@ -23,7 +23,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Список сложных платформеров " }
+        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Список сложных платформеров ", "raterequired": true }
     ],
     [
         [ // levels
@@ -33,7 +33,7 @@ let lists = [
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
             { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
-        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Список сложных уровней " }
+        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Список сложных уровней ", "raterequired": true }
     ],
     [
         [ // levels
@@ -43,7 +43,7 @@ let lists = [
             { "name": "new word", "creator": "eray14", "id": "103", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?" }
         ],
-        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей " }
+        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false }
     ]
 ];
 
@@ -68,13 +68,33 @@ moderators.forEach(moderator => {
     console.log("moderator created");
 });
 
+const div_boxes_box_moderators_raterequired_box = document.createElement("div");
+div_boxes_box_moderators_raterequired_box.className = "box";
+div_boxes.appendChild(div_boxes_box_moderators_raterequired_box);
+
+const div_boxes_box_moderators_raterequired = document.createElement("h2");
+div_boxes_box_moderators_raterequired.textContent = "Оценка необходима?";
+div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired);
+
 lists.forEach(list => {
     let levels = list[0];
     let globEnum = list[1].enum;
     let listname = list[1].name;
     let listhref = list[1].href;
     let listdisplayname = list[1].displayname;
+    let listraterequired = list[1].raterequired;
 
+    if (listraterequired == true) {
+        const div_boxes_box_moderators_raterequired_value = document.createElement("p");
+        div_boxes_box_moderators_raterequired_value.textContent = "Да";
+        div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+    }
+    else {
+        const div_boxes_box_moderators_raterequired_value = document.createElement("p");
+        div_boxes_box_moderators_raterequired_value.textContent = "Нет";
+        div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+    }
+    
     if (listname != document.title) {
         const button = document.createElement("a");
         button.textContent = listdisplayname;
