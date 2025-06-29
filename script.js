@@ -70,7 +70,7 @@ div_boxes_box_raterequired.className = "box";
 div_boxes.appendChild(div_boxes_box_raterequired);
 
 const div_boxes_box_raterequired_h2 = document.createElement("h2");
-div_boxes_box_raterequired_h2.textContent = "Оценка необходима?";
+div_boxes_box_raterequired_h2.textContent = "Нужен рейт?";
 div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
 
 lists.forEach(list => {
