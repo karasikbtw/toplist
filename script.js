@@ -14,7 +14,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список невозможных уровней - TopList", enum: 0, "href": "index.html", "displayname": " Список невозможных уровней ", "raterequired": false }
+        { name: "Impossible лист - TopList", enum: 0, "href": "index.html", "displayname": " Impossible лист ", "raterequired": false }
     ],
     [
         [ // levels
@@ -24,7 +24,7 @@ let lists = [
             { "name": "?", "creator": "noone", "id": "?", "verifed": false },
             { "name": "?", "creator": "noone", "id": "?", "verifed": false }
         ],
-        { name: "Список сложных платформеров - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Список сложных платформеров ", "raterequired": true }
+        { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true }
     ],
     [
         [ // levels
@@ -34,7 +34,7 @@ let lists = [
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
             { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
-        { name: "Список сложных уровней - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Список сложных уровней ", "raterequired": true }
+        { name: "Demon лист - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Demon лист ", "raterequired": true }
     ],
     [
         [ // levels
