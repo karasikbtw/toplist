@@ -1,7 +1,7 @@
 let lists = [
     [ // first list
         [ // levels
-            { "name": "spakr", "creator": "karasikbtw", "id": "?" },
+            { "name": "spakr", "creator": "karasikbtw", "id": "?", "verifed": true },
             { "name": "OfLight", "creator": "yaskripts", "id": "239" },
             { "name": "UnderWorse", "creator": "DECAdence", "id": "145" },
             { "name": "?", "creator": "noone", "id": "?" },
