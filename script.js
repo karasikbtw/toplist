@@ -47,6 +47,19 @@ let lists = [
     ]
 ];
 
+const div_boxes = document.createElement("div");
+div_boxes.className = "boxes";
+document.body.appendChild(div_boxes);
+
+const div_boxes_box_moderators = document.createElement("div");
+div_boxes_box_moderators.className = "box";
+div_boxes_box_moderators.id = "moderators";
+div_boxes.appendChild(div_boxes_box_moderators);
+
+const div_boxes_box_moderators_h2 = document.createElement("h2");
+div_boxes_box_moderators_h2.textContent = "Список модераторов";
+div_boxes_box_moderators.appendChild(div_boxes_box_moderators_h2);
+
 moderators.forEach(moderator => {
     const pp = document.createElement("p");
     pp.textContent = moderator;
