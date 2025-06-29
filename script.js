@@ -83,17 +83,6 @@ lists.forEach(list => {
     let listhref = list[1].href;
     let listdisplayname = list[1].displayname;
     let listraterequired = list[1].raterequired;
-
-    if (listraterequired == true) {
-        const div_boxes_box_moderators_raterequired_value = document.createElement("p");
-        div_boxes_box_moderators_raterequired_value.textContent = "Да";
-        div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
-    }
-    else {
-        const div_boxes_box_moderators_raterequired_value = document.createElement("p");
-        div_boxes_box_moderators_raterequired_value.textContent = "Нет";
-        div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
-    }
     
     if (listname != document.title) {
         const button = document.createElement("a");
@@ -104,6 +93,17 @@ lists.forEach(list => {
     };
     
     if (listname == document.title) {
+        if (listraterequired == true) {
+            const div_boxes_box_moderators_raterequired_value = document.createElement("p");
+            div_boxes_box_moderators_raterequired_value.textContent = "Да";
+            div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+        };
+        else {
+            const div_boxes_box_moderators_raterequired_value = document.createElement("p");
+            div_boxes_box_moderators_raterequired_value.textContent = "Нет";
+            div_boxes_box_moderators.appendChild(div_boxes_box_moderators_raterequired_value);
+        };
+    
         levels.forEach(element => {
             const div_content = document.createElement("div");
             div_content.id = "level";
