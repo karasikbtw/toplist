@@ -21,6 +21,8 @@ body {
     outline-width: 1.5px;
     outline-color:rgb(204, 204, 204);
     text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .box {
     background-color: azure;
