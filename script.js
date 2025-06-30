@@ -106,7 +106,7 @@ lists.forEach(list => {
             let creator = element.creator;
             let id = element.id;
             let level_title = "#"+globEnum+" - "+name+" ("+id+")";
-            let level_below = "выложено: "+creator;
+            let level_below = "создатели: "+creator;
 
             genElement("h1", div_content, level_title);
 
