@@ -1,5 +1,16 @@
 // script.js
 
+function genElement(element, initBody, textContent = null, className = null, id = null, href = null, style = null) {
+    const gen_ = document.createElement(element);
+    gen_.textContent = textContent;
+    gen_.className = className;
+    gen_.id = id;
+    gen_.href = href;
+    gen_.style = style;
+    initBody.appendChild(gen_);
+    return gen_;
+}
+
 let moderators = [
     "karasikbtw",
     "DUHA5656"
@@ -40,40 +51,27 @@ let lists = [
     ]
 ];
 
-const info_p = document.createElement("p");
-info_p.textContent = "Для добавления уровня в список обращаться: @dorsikm (ТГ)";
-info_p.className = "montserrat-sd";
-document.body.appendChild(info_p);
+// bottom of page
+genElement("p", document.body, "Для добавления уровня в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
 
-const div_boxes = document.createElement("div");
-div_boxes.className = "boxes";
-document.body.appendChild(div_boxes);
-            
-const div_boxes_box_moderators = document.createElement("div");
-div_boxes_box_moderators.className = "box";
-div_boxes_box_moderators.id = "moderators";
-div_boxes.appendChild(div_boxes_box_moderators);
-            
-const div_boxes_box_moderators_h2 = document.createElement("h2");
-div_boxes_box_moderators_h2.textContent = "Список модераторов";
-div_boxes_box_moderators.appendChild(div_boxes_box_moderators_h2);
-            
+let div_boxes = genElement("div", document.body, null, "boxes", null); // div: boxes
+
+let div_moderators = genElement("div", div_boxes, null, "box", "moderators"); // div: boxes.moderators
+
+let h2_moderators = genElement("h2", div_moderators, "Список модераторов"); // h2: boxes.moderators.list
+
+// moderator list generator
 moderators.forEach(moderator => {
-    const pp = document.createElement("p");
-    pp.textContent = moderator;
-    document.getElementById("moderators").appendChild(pp);
-            
+    genElement("p", div_moderators, moderator);
+
     console.log("moderator created");
 });
-            
-const div_boxes_box_raterequired = document.createElement("div");
-div_boxes_box_raterequired.className = "box";
-div_boxes.appendChild(div_boxes_box_raterequired);
-            
-const div_boxes_box_raterequired_h2 = document.createElement("h2");
-div_boxes_box_raterequired_h2.textContent = "Нужен рейт?";
-div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_h2);
 
+let div_raterequired = genElement("div", div_boxes, null, "box");
+
+let h2_raterequired = genElement("h2", div_raterequired, "Нужен рейт?");
+
+// for each list
 lists.forEach(list => {
     let levels = list[0];
     let globEnum = list[1].enum;
@@ -83,30 +81,22 @@ lists.forEach(list => {
     let listraterequired = list[1].raterequired;
     
     if (listname != document.title) {
-        const button = document.createElement("a");
-        button.textContent = listdisplayname;
-        button.href = listhref;
-        button.className = "button";
-        document.getElementById("buttons").appendChild(button);
+        genElement("a", document.getElementById("buttons"), listdisplayname, "button", null, listhref);
+
+        console.log("button created");
     };
     
     if (listname == document.title) {
         if (listraterequired == true) {
-            const div_boxes_box_raterequired_value = document.createElement("p");
-            div_boxes_box_raterequired_value.textContent = "Да";
-            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
+            genElement("p", div_raterequired, "Да");
         }
         else {
-            const div_boxes_box_raterequired_value = document.createElement("p");
-            div_boxes_box_raterequired_value.textContent = "Нет";
-            div_boxes_box_raterequired.appendChild(div_boxes_box_raterequired_value);
+            genElement("p", div_raterequired, "Нет");
         }
-    
+
+        // for each level (cards generator)
         levels.forEach(element => {
-            const div_content = document.createElement("div");
-            div_content.id = "level";
-            div_content.className = "level";
-            document.getElementById("levels").appendChild(div_content);
+            let div_content = genElement("div", document.getElementById("levels"), null, "level", "level");
             if (element.verifed == true) {
                 div_content.style = "background-color: rgb(185, 255, 255)";
             };
@@ -115,20 +105,17 @@ lists.forEach(list => {
             let name = element.name;
             let creator = element.creator;
             let id = element.id;
-        
-            const pp = document.createElement("h1");
-            pp.textContent = "#"+globEnum+" - "+name+" ("+id+")"; // #1 - Test (616)
-            div_content.appendChild(pp);
-        
-            const p_blw = document.createElement("h3");
-            p_blw.textContent = "создатель: "+creator; // published by karasikbtw
+            let level_title = "#"+globEnum+" - "+name+" ("+id+")";
+            let level_below = "создатель: "+creator;
+
+            genElement("h1", div_content, level_title);
+
+            let p_below = genElement("h3", div_content, level_below, null, null, null, "color: rgb(87, 87, 87, 0.75)");
             if (element.verifed == true) {
-                p_blw.textContent += " | Подтверждено";
+                p_below.textContent += " | Подтверждено";
             };
-            p_blw.style = "color: rgb(87, 87, 87, 0.75)";
-            div_content.appendChild(p_blw);
         
-            console.log("test element created");
+            console.log("card created");
         });
     };
 });
