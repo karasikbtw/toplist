@@ -27,7 +27,7 @@ body {
     padding: 10px 10px 10px 10px;
 }
 .button:hover {
-    background-color: box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 .box {
     background-color: azure;
