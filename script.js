@@ -20,6 +20,7 @@ let lists = [
     [ // first list
         [ // levels
             { "name": "OfLight", "creator": "yaskripts", "id": "242", "verifed": false },
+            { "name": "Evil Test", "creator": "WazalOwner", "id": "257", "verifed": false},
             { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Impossible лист - TopList", enum: 0, "href": "index.html", "displayname": " Impossible лист ", "raterequired": false }
