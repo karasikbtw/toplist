@@ -59,7 +59,7 @@ let div_boxes = genElement("div", document.body, null, "boxes", null); // div: b
 
 let div_moderators = genElement("div", div_boxes, null, "box", "moderators"); // div: boxes.moderators
 
-let h2_moderators = genElement("h2", div_moderators, "Список модераторов"); // h2: boxes.moderators.list
+let h2_moderators = genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
 
 // moderator list generator
 moderators.forEach(moderator => {
