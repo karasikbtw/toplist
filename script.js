@@ -33,10 +33,10 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "Diamond Trip", "creator": "alduk9", "id": "163", "verifed": false },
             { "name": "TT world", "creator": "bikchi", "id": "136", "verifed": false },
             { "name": "grimuar", "creator": "redyzzz", "id": "223", "verifed": false },
             { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
+            { "name": "Electron", "creator": "MamaYmerla", "id": "248", "verifed": false },
             { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
         { name: "Demon лист - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Demon лист ", "raterequired": true }
