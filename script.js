@@ -1,6 +1,6 @@
 // script.js
 
-function genElement(element, initBody, textContent = null, className = null, id = null, href = null, style = null) {
+function genElement(element, initBody, textContent = "", className = "", id = null, href = "", style = "") {
     const gen_ = document.createElement(element);
     gen_.textContent = textContent;
     gen_.className = className;
@@ -60,9 +60,9 @@ let lists = [
 // bottom of page
 genElement("p", document.body, "Для добавления уровня в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
 
-let div_boxes = genElement("div", document.body, null, "boxes", null); // div: boxes
+let div_boxes = genElement("div", document.body, "", "boxes", ""); // div: boxes
 
-let div_moderators = genElement("div", div_boxes, null, "box", "moderators"); // div: boxes.moderators
+let div_moderators = genElement("div", div_boxes, "", "box", "moderators"); // div: boxes.moderators
 
 let h2_moderators = genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
 
@@ -73,7 +73,7 @@ moderators.forEach(moderator => {
     console.log("moderator created");
 });
 
-let div_raterequired = genElement("div", div_boxes, null, "box");
+let div_raterequired = genElement("div", div_boxes, "", "box");
 
 let h2_raterequired = genElement("h2", div_raterequired, "Нужен рейт?");
 
@@ -87,7 +87,7 @@ lists.forEach(list => {
     let listraterequired = list[1].raterequired;
     
     if (listname != document.title) {
-        genElement("a", document.getElementById("buttons"), listdisplayname, "button", null, listhref);
+        genElement("a", document.getElementById("buttons"), listdisplayname, "button", "", listhref);
 
         console.log("button created");
     };
@@ -102,7 +102,7 @@ lists.forEach(list => {
 
         // for each level (cards generator)
         levels.forEach(element => {
-            let div_content = genElement("div", document.getElementById("levels"), null, "level", "level");
+            let div_content = genElement("div", document.getElementById("levels"), "", "level", "level");
             if (element.verifed == true) {
                 div_content.style = "background-color: rgb(185, 255, 255)";
             };
@@ -116,7 +116,7 @@ lists.forEach(list => {
 
             genElement("h1", div_content, level_title);
 
-            let p_below = genElement("h3", div_content, level_below, null, null, null, "color: rgb(87, 87, 87, 0.75)");
+            let p_below = genElement("h3", div_content, level_below, "", "", "", "color: rgb(87, 87, 87, 0.75)");
             if (element.verifed == true) {
                 p_below.textContent += " | Подтверждено";
             };
