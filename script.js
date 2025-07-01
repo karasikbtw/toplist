@@ -48,8 +48,8 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
             { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": false },
+            { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
             { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
