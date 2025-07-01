@@ -111,7 +111,13 @@ lists.forEach(list => {
             let name = element.name;
             let below = element.below;
             let id = element.id;
-            let level_title = "#"+globEnum+" - "+name+" ("+id+")";
+            let level_title;
+            if (id == "") {
+                level_title = "#"+globEnum+" - "+name;
+            }
+            else {
+                level_title = "#"+globEnum+" - "+name+" ("+id+")";
+            }
             let level_below = below;
 
             genElement("h1", div_content, level_title);
