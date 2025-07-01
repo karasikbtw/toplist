@@ -23,35 +23,35 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "OfLight", "creator": "yaskripts", "id": "242", "verifed": false },
-            { "name": "Evil Test", "creator": "WazalOwner", "id": "257", "verifed": false},
-            { "name": "UnderWorse", "creator": "DECAdence", "id": "145", "verifed": false },
+            { "name": "OfLight", "below": "создатели: yaskripts", "id": "242", "verifed": false },
+            { "name": "Evil Test", "below": "создатели: WazalOwner", "id": "257", "verifed": false},
+            { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false }
     ],
     [
         [ // levels
-            { "name": "19", "creator": "Taujaan", "id": "151", "verifed": false },
+            { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true }
     ],
     [
         [ // levels
-            { "name": "TT world", "creator": "bikchi", "id": "136", "verifed": false },
-            { "name": "grimuar", "creator": "redyzzz", "id": "223", "verifed": false },
-            { "name": "ThisIsLikeThatSound", "creator": "Taujaan", "id": "117", "verifed": false },
-            { "name": "Electron", "creator": "MamaYmerla", "id": "248", "verifed": false },
-            { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
+            { "name": "TT world", "below": "создатели: bikchi", "id": "136", "verifed": false },
+            { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
+            { "name": "ThisIsLikeThatSound", "below": "создатели: Taujaan", "id": "117", "verifed": false },
+            { "name": "Electron", "below": "создатели: MamaYmerla", "id": "248", "verifed": false },
+            { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false }
         ],
         { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true }
     ],
     [
         [ // levels
-            { "name": "you cant beat this", "creator": "Honder", "id": "275", "verifed": false },
-            { "name": "Hayate", "creator": "Taujaan", "id": "123", "verifed": false },
-            { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120", "verifed": false },
-            { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213", "verifed": false },
-            { "name": "new word", "creator": "eray14", "id": "103", "verifed": false },
+            { "name": "you cant beat this", "below": "создатели: Honder", "id": "275", "verifed": false },
+            { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
+            { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": false },
+            { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
+            { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false }
     ]
@@ -109,10 +109,10 @@ lists.forEach(list => {
         
             globEnum += 1;
             let name = element.name;
-            let creator = element.creator;
+            let below = element.below;
             let id = element.id;
             let level_title = "#"+globEnum+" - "+name+" ("+id+")";
-            let level_below = "создатели: "+creator;
+            let level_below = below;
 
             genElement("h1", div_content, level_title);
 
