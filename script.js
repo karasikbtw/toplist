@@ -105,7 +105,7 @@ lists.forEach(list => {
         levels.forEach(element => {
             let div_content = genElement("div", document.getElementById("levels"), "", "level", "level");
             if (element.verifed == true) {
-                div_content.style = "background-color: rgb(185, 255, 255)";
+                div_content.style = "background-color: rgb(219 255 255)";
             };
         
             globEnum += 1;
