@@ -19,7 +19,7 @@ let moderators = [
 let lists = [
     [ // first list
         [],
-        { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false }
+        { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false, "ratevisibility": true }
     ],
     [
         [ // levels
@@ -27,13 +27,13 @@ let lists = [
             { "name": "Evil Test", "below": "создатели: WazalOwner", "id": "257", "verifed": false},
             { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
-        { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false }
+        { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false, "ratevisibility": true }
     ],
     [
         [ // levels
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
-        { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true }
+        { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true, "ratevisibility": true }
     ],
     [
         [ // levels
@@ -44,7 +44,7 @@ let lists = [
             { "name": "Electron", "below": "создатели: MamaYmerla", "id": "248", "verifed": false },
             { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false }
         ],
-        { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true }
+        { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true, "ratevisibility": true }
     ],
     [
         [ // levels
@@ -54,13 +54,13 @@ let lists = [
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
             { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
-        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false }
+        { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false, "ratevisibility": true }
     ],
     [
         [ // players*
             { "name": "ZOINK", "below": "", "id": "", "verifed": false },
         ],
-        { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true }
+        { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true, "ratevisibility": false }
     ]
 ];
 
@@ -80,10 +80,6 @@ moderators.forEach(moderator => {
     console.log("moderator created");
 });
 
-let div_raterequired = genElement("div", div_boxes, "", "box");
-
-let h2_raterequired = genElement("h2", div_raterequired, "Нужен рейт?");
-
 // for each list
 lists.forEach(list => {
     let levels = list[0];
@@ -100,11 +96,16 @@ lists.forEach(list => {
     };
     
     if (listname == document.title) {
-        if (listraterequired == true) {
-            genElement("p", div_raterequired, "Да");
-        }
-        else {
-            genElement("p", div_raterequired, "Нет");
+        if (list[1].ratevisibility == true) {
+            let div_raterequired = genElement("div", div_boxes, "", "box");
+            let h2_raterequired = genElement("h2", div_raterequired, "Нужен рейт?");
+
+            if (listraterequired == true) {
+                genElement("p", div_raterequired, "Да");
+            }
+            else {
+                genElement("p", div_raterequired, "Нет");
+            }
         }
 
         // for each level (cards generator)
