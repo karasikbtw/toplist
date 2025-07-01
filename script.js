@@ -55,6 +55,12 @@ let lists = [
             { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false }
+    ],
+    [
+        [ // players*
+            { "name": "Prilka", "below": "", "id": "", "verifed": false },
+        ],
+        { name: "Слеер лист - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Слеер лист ", "raterequired": true }
     ]
 ];
 
