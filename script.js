@@ -37,6 +37,7 @@ let lists = [
     ],
     [
         [ // levels
+            { "name": "8o", "below": "создатели: ? | верификатор: Prilka", "id": "287", "verifed": true },
             { "name": "TT world", "below": "создатели: bikchi", "id": "136", "verifed": false },
             { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
             { "name": "ThisIsLikeThatSound", "below": "создатели: Taujaan", "id": "117", "verifed": false },
@@ -124,7 +125,7 @@ lists.forEach(list => {
 
             let p_below = genElement("h3", div_content, level_below, "", "", "", "color: rgb(87, 87, 87, 0.75)");
             if (element.verifed == true) {
-                p_below.textContent += " | Подтверждено";
+                p_below.textContent += " | подтверждено";
             };
         
             console.log("card created");
