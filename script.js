@@ -37,7 +37,7 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "8o", "below": "создатели: Bickchi? | верификатор: Prilka", "id": "287", "verifed": true },
+            { "name": "8o", "below": "создатели: Bikchi? | верификатор: Prilka", "id": "287", "verifed": true },
             { "name": "TT world", "below": "создатели: bikchi", "id": "136", "verifed": false },
             { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
             { "name": "ThisIsLikeThatSound", "below": "создатели: Taujaan", "id": "117", "verifed": false },
