@@ -19,7 +19,7 @@ let moderators = [
 let lists = [
     [ // first list
         [],
-        { name: "Impossible лист - TopList", enum: 0, "href": "index.html", "displayname": " Impossible лист ", "raterequired": false }
+        { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false }
     ],
     [
         [ // levels
@@ -43,7 +43,7 @@ let lists = [
             { "name": "Electron", "creator": "MamaYmerla", "id": "248", "verifed": false },
             { "name": "Nautilos", "creator": "kituh0777", "id": "171", "verifed": false }
         ],
-        { name: "Demon лист - TopList", enum: 0, "href": "hard-levels-list.html", "displayname": " Demon лист ", "raterequired": true }
+        { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true }
     ],
     [
         [ // levels
