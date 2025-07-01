@@ -60,7 +60,7 @@ let lists = [
         [ // players*
             { "name": "ZOINK", "below": "", "id": "", "verifed": false },
         ],
-        { name: "Слеер лист - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Слеер лист ", "raterequired": true }
+        { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true }
     ]
 ];
 
