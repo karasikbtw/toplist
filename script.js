@@ -18,8 +18,7 @@ let moderators = [
 
 let lists = [
     [ // first list
-        [ // levels
-        ],
+        [],
         { name: "Impossible лист - TopList", enum: 0, "href": "index.html", "displayname": " Impossible лист ", "raterequired": false }
     ],
     [
