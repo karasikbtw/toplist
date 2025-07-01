@@ -47,6 +47,7 @@ let lists = [
     ],
     [
         [ // levels
+            { "name": "you cant beat this", "creator": "Honder", "id": "275", "verifed": false },
             { "name": "Hayate", "creator": "Taujaan", "id": "123", "verifed": false },
             { "name": "1st DUHA5656 lvl", "creator": "DUHA5656", "id": "120", "verifed": false },
             { "name": "16 SECONDS HELL", "creator": "Honder", "id": "213", "verifed": false },
