@@ -62,7 +62,7 @@ let lists = [
     ],
     [
         [ // players*
-            { "name": "DUHA5656", "below": "хардест в ГДПС: TT world от Bikchi (136) | хардест в ГД: CraZy от DavJT (40945673)", "id": "", "verifed": true },
+            { "name": "DUHA5656", "below": "хардест демон в ГДПС: TT world | хардест челлендж в ГДПС: 1st DUHA5656 lvl | хардест в ГД: CraZy", "id": "", "verifed": true },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
         { "rate": false, "moderators": true, "p_tag": true } // visibility
@@ -86,6 +86,8 @@ lists.forEach(list => {
     
     if (listname == document.title) {
         // bottom of the page
+        let div_boxes = genElement("div", document.body, "", "boxes", ""); // div: boxes
+
         // p tag
         if (list[2].p_tag == true) {
             genElement("p", document.body, "Для добавления уровня в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
@@ -93,7 +95,6 @@ lists.forEach(list => {
 
         // moderator list
         if (list[2].moderators == true) {
-            let div_boxes = genElement("div", document.body, "", "boxes", ""); // div: boxes
             let div_moderators = genElement("div", div_boxes, "", "box", "moderators"); // div: boxes.moderators
             let h2_moderators = genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
             
