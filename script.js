@@ -64,7 +64,8 @@ let lists = [
         [ // players*
             { "name": "DUHA5656", "below": "хардест в ГДПС: TT world | хардест в ГД: ?", "id": "", "verifed": true },
         ],
-        { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true, "ratevisibility": false }
+        { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
+        { "rate": false } // visibility
     ]
 ];
 
