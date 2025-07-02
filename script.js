@@ -57,7 +57,7 @@ let lists = [
     ],
     [
         [ // players*
-            { "name": "ZOINK", "below": "", "id": "", "verifed": false },
+            { "name": "DUHA5656", "below": "хардесты: TT world", "id": "", "verifed": false },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true, "ratevisibility": false }
     ]
