@@ -20,7 +20,7 @@ let lists = [
     [ // first list
         [],
         { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false },
-        { "rate": true, "moderators": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
         [ // levels
@@ -29,14 +29,14 @@ let lists = [
             { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false },
-        { "rate": true, "moderators": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
         [ // levels
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true },
-        { "rate": true, "moderators": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
         [ // levels
@@ -48,7 +48,7 @@ let lists = [
             { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false }
         ],
         { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true },
-        { "rate": true, "moderators": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
         [ // levels
@@ -58,14 +58,14 @@ let lists = [
             { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false },
-        { "rate": true, "moderators": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
         [ // players*
             { "name": "DUHA5656", "below": "хардест в ГДПС: TT world | хардест в ГД: ?", "id": "", "verifed": true },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
-        { "rate": false, "moderators": true } // visibility
+        { "rate": false, "moderators": true, "p_tag": true } // visibility
     ]
 ];
 
@@ -86,9 +86,13 @@ lists.forEach(list => {
     
     if (listname == document.title) {
         // bottom of the page
+        // p tag
+        if (list[2].p_tag == true) {
+            genElement("p", document.body, "Для добавления уровня в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
+        }
+
         // moderator list
         if (list[2].moderators == true) {
-            genElement("p", document.body, "Для добавления уровня в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
             let div_boxes = genElement("div", document.body, "", "boxes", ""); // div: boxes
             let div_moderators = genElement("div", div_boxes, "", "box", "moderators"); // div: boxes.moderators
             let h2_moderators = genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
@@ -100,7 +104,7 @@ lists.forEach(list => {
                 console.log("moderator created");
             });
         }
-        
+
         // rate required?
         if (list[2].rate == true) {
             let div_raterequired = genElement("div", div_boxes, "", "box");
