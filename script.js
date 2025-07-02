@@ -62,7 +62,7 @@ let lists = [
     ],
     [
         [ // players*
-            { "name": "DUHA5656", "below": "хардест в ГДПС: TT world by Bikchi (136) | хардест в ГД: CraZy by DavJT (40945673)", "id": "", "verifed": true },
+            { "name": "DUHA5656", "below": "хардест в ГДПС: TT world от Bikchi (136) | хардест в ГД: CraZy от DavJT (40945673)", "id": "", "verifed": true },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
         { "rate": false, "moderators": true, "p_tag": true } // visibility
