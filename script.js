@@ -1,4 +1,4 @@
-// script.js
+// script.js ver2
 
 function genElement(element, initBody, textContent = "", className = "", id = null, href = "", style = "") {
     const gen_ = document.createElement(element);
