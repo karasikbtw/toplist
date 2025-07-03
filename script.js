@@ -64,6 +64,7 @@ let lists = [
     ],
     [
         [ // players*
+            { "name": "Prilka", "below": "хардест в ГДПС: 8o", "id": "", "verifed": true },
             { "name": "DUHA5656", "below": "хардест демон в ГДПС: TT world | хардест челлендж в ГДПС: 1st DUHA5656 lvl | хардест в ГД: CraZy", "id": "", "verifed": true },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
