@@ -33,6 +33,7 @@ let lists = [
     ],
     [
         [ // levels
+            { "name": "Evil Test", "below": "создатели: WazalOwner | верификатор: Prilka", "id": "277", "verified": true},
             { "name": "The Maze", "below": "создатели: WazalOwner | верификатор: karasikbtw", "id": "295", "verified": true},
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
