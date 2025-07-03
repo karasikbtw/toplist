@@ -33,6 +33,7 @@ let lists = [
     ],
     [
         [ // levels
+            { "name": "The Maze", "below": "создатели: WazalOwner | верификатор: karasikbtw", "id": "295", "verified": true},
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true },
