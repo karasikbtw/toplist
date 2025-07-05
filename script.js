@@ -44,6 +44,7 @@ let lists = [
         [ // levels
             //{ "name": "8o", "below": "создатели: Bikchi | верификатор: Prilka", "id": "287", "verifed": true },
             { "name": "TT world", "below": "создатели: Bikchi", "id": "136", "verifed": false },
+            { "name": "ordinary", "below": "создатели: anxiety team | выложил: nevverr", "id": "310", "verifed": false },
             { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
             { "name": "ThisIsLikeThatSound", "below": "создатели: Taujaan", "id": "117", "verifed": false },
             { "name": "Electron", "below": "создатели: MamaYmerla", "id": "248", "verifed": false },
@@ -66,6 +67,7 @@ let lists = [
         [ // players*
             { "name": "Prilka", "below": "хардест в ГДПС: 8o | хардест в ГД: Jesse Pinkman", "id": "", "verifed": true },
             { "name": "DUHA5656", "below": "хардест в ГДПС: TT world | хардест в ГД: CraZy", "id": "", "verifed": true },
+            { "name": "nevverr", "below": "хардест в ГДПС: ordinary | хардест в ГД: Sonic Wave", "id": "", "verifed": false },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
         { "rate": false, "moderators": true, "p_tag": true } // visibility
