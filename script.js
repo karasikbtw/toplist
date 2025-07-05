@@ -25,7 +25,7 @@ let lists = [
     [
         [ // levels
             { "name": "OfLight", "below": "создатели: yaskripts", "id": "242", "verifed": false },
-            { "name": "Evil Test", "below": "создатели: WazalOwner", "id": "257", "verifed": false},
+            { "name": "iWillSuicide", "below": "создатели: komaru", "id": "245", "verifed": false },
             { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false },
