@@ -48,7 +48,7 @@ let lists = [
             { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
             { "name": "ThisIsLikeThatSound", "below": "создатели: Taujaan", "id": "117", "verifed": false },
             { "name": "Electron", "below": "создатели: MamaYmerla", "id": "248", "verifed": false },
-            { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false }
+            { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false },
         ],
         { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
@@ -84,7 +84,7 @@ lists.forEach(list => {
     let listraterequired = list[1].raterequired;
     
     if (listname != document.title) {
-        genElement("a", document.getElementById("buttons"), listdisplayname, "button", "", listhref);
+        genElement("a", document.getElementById("buttons"), listdisplayname, "button montserrat-sd", "", listhref);
 
         console.log("button created");
     };
@@ -100,8 +100,8 @@ lists.forEach(list => {
 
         // moderator list
         if (list[2].moderators == true) {
-            let div_moderators = genElement("div", div_boxes, "", "box", "moderators"); // div: boxes.moderators
-            let h2_moderators = genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
+            let div_moderators = genElement("div", div_boxes, "", "main-box montserrat-sd", "moderators"); // div: boxes.moderators
+            genElement("h2", div_moderators, "Список модераторов сайта"); // h2: boxes.moderators.list
             
             // moderator list generator
             moderators.forEach(moderator => {
@@ -113,8 +113,8 @@ lists.forEach(list => {
 
         // rate required?
         if (list[2].rate == true) {
-            let div_raterequired = genElement("div", div_boxes, "", "box");
-            let h2_raterequired = genElement("h2", div_raterequired, "Нужен рейт?");
+            let div_raterequired = genElement("div", div_boxes, "", "main-box montserrat-sd");
+            genElement("h2", div_raterequired, "Нужен рейт?");
 
             if (listraterequired == true) {
                 genElement("p", div_raterequired, "Да");
@@ -126,16 +126,22 @@ lists.forEach(list => {
 
         // for each level (cards generator)
         levels.forEach(element => {
-            let div_content = genElement("div", document.getElementById("levels"), "", "level", "level");
-            if (element.verifed == true) {
-                div_content.style = "background-color: rgb(219 255 255)";
-            };
-        
             globEnum += 1;
             let name = element.name;
             let below = element.below;
             let id = element.id;
             let level_title;
+
+            let div_content = genElement("div", document.getElementById("levels"), "", "main-box montserrat-sd level-box", "level");
+            div_content.addEventListener("click", function() {
+                navigator.clipboard.writeText(id).then(function() {
+                    
+                });
+            });
+            if (element.verifed == true) {
+                div_content.style = "background-color: rgb(219 255 255)";
+            };
+            
             if (id == "") {
                 level_title = "#"+globEnum+" - "+name;
             }

@@ -5,53 +5,42 @@
     font-style: normal;
 }
 body {
-    background-color: rgb(234, 234, 234)
+    background-color: rgb(234, 234, 234);
+    text-align: center;
 }
 .boxes {
     display: flex;
 }
 .button {
-    background-color: azure;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+    background-color: white;
+    border-radius: 5px;
     color: black;
-    outline-style: dashed;
-    outline-width: 1.5px;
-    outline-color:rgb(204, 204, 204);
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    transition: box-shadow 0.15s;
+    margin-top: 5px;
+    margin: 5px 5px 5px 5px;
 }
 .button:hover {
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
-.box {
-    background-color: azure;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+.main-box {
+    background-color: white;
     margin: 5px 5px 5px 5px;
-    outline-style: dashed;
-    outline-width: 1.5px;
-    outline-color:rgb(204, 204, 204);
+    box-shadow: 0 3px 3px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
     align-content: center;
     padding-left: 10px;
     padding-right: 10px;
+    transition: transform 0.3s;
 }
-.level {
-    background-color: azure;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    margin: 5px 5px 5px 5px;
-    outline-style: dashed;
-    outline-width: 1.5px;
-    outline-color:rgb(204, 204, 204);
-    align-content: center;
-    padding-left: 10px;
+.main-box:hover {
+    transform: translateY(-4px);
+}
+.level-box {
+    align-self: center;
+    cursor: pointer;
+}
+.list-name {
+    position: sticky;
+    background-color: rgb(230, 230, 230);
 }
