@@ -58,7 +58,6 @@ let lists = [
             { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": false },
             { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
-            { "name": "new word", "below": "создатели: eray14", "id": "103", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
