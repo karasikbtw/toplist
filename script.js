@@ -133,9 +133,12 @@ lists.forEach(list => {
 
             let div_content = genElement("div", document.getElementById("levels"), "", "main-box montserrat-sd level-box", "level");
             div_content.addEventListener("click", function() {
-                navigator.clipboard.writeText(id).then(function() {
-                    
-                });
+                if (id != "") {
+                    navigator.clipboard.writeText(id);
+                }
+                else {
+                    navigator.clipboard.writeText(name);
+                }
             });
             if (element.verifed == true) {
                 div_content.style = "background-color: rgb(219 255 255)";
