@@ -55,9 +55,9 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": false },
+            { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": true },
             { "name": "3 seconds hell", "below": "создатели: komaru", "id": "339", "verifed": true },
-            { "name": "30 fps spamm", "below": "создатели: DUHA5656", "id": "337", "verifed": false },
+            { "name": "30 fps spamm", "below": "создатели: DUHA5656", "id": "337", "verifed": true },
             { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
         ],
