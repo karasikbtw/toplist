@@ -33,8 +33,8 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "Evil Test", "below": "создатели: WazalOwner | верификатор: Prilka", "id": "277", "verified": true},
-            { "name": "The Maze", "below": "создатели: WazalOwner | верификатор: karasikbtw", "id": "295", "verified": true},
+            { "name": "Evil Test", "below": "создатели: WazalOwner | верификатор: Prilka", "id": "277", "verifed": true },
+            { "name": "The Maze", "below": "создатели: WazalOwner | верификатор: karasikbtw", "id": "295", "verifed": true },
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true },
@@ -66,7 +66,7 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": true },
+            { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": false },
         ],
         { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
