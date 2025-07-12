@@ -42,7 +42,6 @@ let lists = [
     ],
     [
         [ // levels
-            //{ "name": "8o", "below": "создатели: Bikchi | верификатор: Prilka", "id": "287", "verifed": true },
             { "name": "TT world", "below": "создатели: Bikchi", "id": "136", "verifed": false },
             { "name": "ordinary", "below": "создатели: anxiety team | выложил/верификатор: nevverr", "id": "310", "verifed": false },
             { "name": "grimuar", "below": "создатели: redyzzz", "id": "223", "verifed": false },
@@ -63,6 +62,13 @@ let lists = [
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false },
+        { "rate": true, "moderators": true, "p_tag": true } // visibility
+    ],
+    [
+        [ // levels
+            { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": true },
+        ],
+        { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
     [
