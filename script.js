@@ -13,7 +13,8 @@ function genElement(element, initBody, textContent = "", className = "", id = nu
 
 let moderators = [
     "karasikbtw",
-    "DUHA5656"
+    "DUHA5656",
+    "Prilka"
 ];
 
 let lists = [
