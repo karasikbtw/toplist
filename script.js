@@ -67,6 +67,7 @@ let lists = [
     ],
     [
         [ // levels
+            { "name": "KOCMOC", "below": "создатели: ? | выложил: ?", "id": "", "verifed": false },
             { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": false },
             { "name": "telescope", "below": "создатели: anxiety team", "id": "", "verifed": false },
         ],
