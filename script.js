@@ -69,7 +69,7 @@ let lists = [
         [ // levels
             { "name": "KOCMOC", "below": "создатели: ? | выложил: ?", "id": "", "verifed": false },
             { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": false },
-            { "name": "telescope", "below": "создатели: anxiety team", "id": "", "verifed": false },
+            { "name": "telescope", "below": "создатели: CherVy Team", "id": "", "verifed": false },
         ],
         { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
