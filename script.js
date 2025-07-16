@@ -21,6 +21,7 @@ let lists = [
     [ // first list
         [
             { "name": "Appalachi", "below": "создатели: Sucka", "id": "369", "verifed": false },
+            { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
@@ -28,8 +29,6 @@ let lists = [
     [
         [ // levels
             { "name": "OfLight", "below": "создатели: yaskripts", "id": "242", "verifed": false },
-            { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
-            { "name": "iWillSuicide", "below": "создатели: komaru", "id": "245", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
