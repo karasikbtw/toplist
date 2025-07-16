@@ -19,7 +19,9 @@ let moderators = [
 
 let lists = [
     [ // first list
-        [],
+        [
+            { "name": "Appalachi", "below": "создатели: Sucka", "id": "369", "verifed": false },
+        ],
         { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
     ],
@@ -68,9 +70,9 @@ let lists = [
     ],
     [
         [ // levels
-            { "name": "KOCMOC", "below": "создатели: ? | выложил: ?", "id": "", "verifed": false },
+            { "name": "KOCMOC", "below": "создатели: kisloteam | выложил: Kisl0", "id": "", "verifed": false },
             { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": false },
-            { "name": "telescope", "below": "создатели: CherVy Team", "id": "", "verifed": false },
+            { "name": "telescope", "below": "создатели: ?", "id": "", "verifed": false },
         ],
         { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
         { "rate": true, "moderators": true, "p_tag": true } // visibility
