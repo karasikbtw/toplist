@@ -20,6 +20,7 @@ let moderators = [
 let lists = [
     [ // first list
         [
+            { "name": "kocmoc unleashed", "below": "создатели: kisloteam | выложил: Kisl0", "id": "382", "verifed": false },
             { "name": "Appalachi", "below": "создатели: Sucka", "id": "369", "verifed": false },
             { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
@@ -70,7 +71,7 @@ let lists = [
     [
         [ // levels
             { "name": "KOCMOC", "below": "создатели: kisloteam | выложил: Kisl0", "id": "", "verifed": false },
-            { "name": "firewall", "below": "создатели: anxiety team", "id": "", "verifed": false },
+            { "name": "firewall", "below": "создатели: kisloteam", "id": "", "verifed": false },
             { "name": "telescope", "below": "создатели: kisloteam", "id": "", "verifed": false },
         ],
         { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
