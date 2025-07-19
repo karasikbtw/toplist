@@ -17,6 +17,7 @@ let moderators = [
     "Prilka"
 ];
 let supports = [
+    "@toplist_supportbot",
     "@Nurikpenitft"
 ];
 
@@ -28,14 +29,14 @@ let lists = [
             { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
             { "name": "OfLight", "below": "создатели: yaskripts", "id": "242", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
@@ -44,7 +45,7 @@ let lists = [
             { "name": "19", "below": "создатели: Taujaan", "id": "151", "verifed": false },
         ],
         { name: "Platformer Demon лист - TopList", enum: 0, "href": "hard-platformer-list.html", "displayname": " Platformer Demon лист ", "raterequired": true },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
@@ -56,7 +57,7 @@ let lists = [
             { "name": "Nautilos", "below": "создатели: kituh0777", "id": "171", "verifed": false },
         ],
         { name: "Demon лист - TopList", enum: 0, "href": "index.html", "displayname": " Demon лист ", "raterequired": true },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
@@ -69,7 +70,7 @@ let lists = [
             //{ "name": "Gibridge", "below": "создатели: WazalOwner", "id": "369", "verifed": false },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
@@ -78,7 +79,7 @@ let lists = [
             { "name": "telescope", "below": "создатели: kisloteam", "id": "", "verifed": false },
         ],
         { name: "Невышедший лист - TopList", enum: 0, "href": "unloaded-list.html", "displayname": " Невышедший лист ", "raterequired": true },
-        { "rate": true, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // players*
@@ -87,7 +88,7 @@ let lists = [
             { "name": "nevverr", "below": "хардест в ГДПС: ordinary | хардест в ГД: Sonic Wave", "id": "", "verifed": false },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
-        { "rate": false, "moderators": true, "p_tag": true, "support": true, "support_tag": true } // visibility
+        { "rate": false, "moderators": true, "p_tag": true, "support": true } // visibility
     ]
 ];
 
@@ -113,11 +114,6 @@ lists.forEach(list => {
         // p tag
         if (list[2].p_tag == true) {
             genElement("p", document.body, "Для добавления в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
-        }
-
-        // support bot tag
-        if (list[2].support_tag == true) {
-            genElement("p", document.body, "При вопросах обращаться к боту: @toplist_supportbot (ТГ)", "montserrat-sd", null); // p
         }
 
         // moderator list
