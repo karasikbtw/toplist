@@ -84,8 +84,8 @@ let lists = [
     [
         [ // players*
             { "name": "Prilka", "below": "хардест в ГДПС: 8o | хардест в ГД: Jesse Pinkman", "id": "", "verifed": true },
-            { "name": "DUHA5656", "below": "хардест в ГДПС: TT world | хардест в ГД: Acropolis", "id": "", "verifed": true },
             { "name": "nevverr", "below": "хардест в ГДПС: ordinary | хардест в ГД: Sonic Wave", "id": "", "verifed": false },
+            { "name": "DUHA5656", "below": "хардест в ГДПС: TT world | хардест в ГД: Acropolis", "id": "", "verifed": true },
         ],
         { name: "Слеер лист - TopList", enum: 0, "href": "sleer-list.html", "displayname": " Слеер лист ", "raterequired": true },
         { "rate": false, "moderators": true, "p_tag": true, "support": true } // visibility
