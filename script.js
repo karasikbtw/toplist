@@ -66,8 +66,8 @@ let lists = [
             { "name": "30 fps spamm", "below": "создатели: DUHA5656", "id": "337", "verifed": true },
             { "name": "robotopa", "below": "создатели: komaru", "id": "343", "verifed": true },
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
-            { "name": "lolololololololololololol", "below": "создатели: DUHA5656", "id": "412", "verifed": false },
-            { "name": "UwU", "below": "создатели: DUHA5656", "id": "415", "verifed": false },
+            { "name": "lolololololololololololol", "below": "создатели: DUHA5656", "id": "412", "verifed": true },
+            { "name": "UwU", "below": "создатели: DUHA5656", "id": "415", "verifed": true },
         ],
         { name: "Список челленджей - TopList", enum: 0, "href": "challenge-list.html", "displayname": " Список челленджей ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
