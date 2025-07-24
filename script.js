@@ -64,7 +64,6 @@ let lists = [
             { "name": "1st DUHA5656 lvl", "below": "создатели: DUHA5656", "id": "120", "verifed": true },
             { "name": "3 seconds hell", "below": "создатели: komaru", "id": "339", "verifed": true },
             { "name": "30 fps spamm", "below": "создатели: DUHA5656", "id": "337", "verifed": true },
-            { "name": "Hayate", "below": "создатели: Taujaan", "id": "123", "verifed": false },
             { "name": "robotopa", "below": "создатели: komaru", "id": "343", "verifed": true },
             { "name": "16 SECONDS HELL", "below": "создатели: Honder", "id": "213", "verifed": false },
             { "name": "lolololololololololololol", "below": "создатели: DUHA5656", "id": "412", "verifed": false },
