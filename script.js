@@ -26,13 +26,13 @@ let lists = [
         [
             { "name": "kocmoc unleashed", "below": "создатели: kisloteam | выложил: Kisl0", "id": "382", "verifed": false },
             { "name": "Appalachi", "below": "создатели: Sucka", "id": "369", "verifed": false },
-            { "name": "UnderWorse", "below": "создатели: DECAdence", "id": "145", "verifed": false },
         ],
         { name: "Impossible лист - TopList", enum: 0, "href": "impossible-list.html", "displayname": " Impossible лист ", "raterequired": false },
         { "rate": true, "moderators": true, "p_tag": true, "support": true } // visibility
     ],
     [
         [ // levels
+            { "name": "UnderWorse", "below": "создатели: DECAdence | верификатор: komaru", "id": "145", "verifed": false },
             { "name": "OfLight", "below": "создатели: yaskripts", "id": "242", "verifed": false },
         ],
         { name: "Анрейт Demon лист - TopList", enum: 0, "href": "unrate-demon-list.html", "displayname": " Анрейт Demon лист ", "raterequired": false },
