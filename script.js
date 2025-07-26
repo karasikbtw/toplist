@@ -114,7 +114,7 @@ lists.forEach(list => {
 
         // p tag
         if (list[2].p_tag == true) {
-            genElement("p", document.body, "Для добавления в список обращаться: @dorsikm (ТГ)", "montserrat-sd", null); // p
+            genElement("p", document.body, "Для добавления в список обращаться: @duha6767_off", "montserrat-sd", null); // p
         }
 
         // moderator list
