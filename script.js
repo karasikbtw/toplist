@@ -12,7 +12,6 @@ function genElement(element, initBody, textContent = "", className = "", id = nu
 }
 
 let moderators = [
-    "karasikbtw",
     "DUHA5656",
     "Prilka"
 ];
